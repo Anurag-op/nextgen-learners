@@ -3,6 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Next Gen Learners - Login</title>
+
+  <!-- ✅ Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185608906934494"
+     crossorigin="anonymous"></script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
@@ -38,6 +43,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: calc(100vh - 70px);
     }
 
@@ -74,6 +80,11 @@
       text-align: center;
       font-size: 14px;
     }
+
+    .ads-container {
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -89,6 +100,19 @@
       <button onclick="login()">Login</button>
       <p id="error" class="error"></p>
     </div>
+
+    <!-- ✅ Google Ad Block -->
+    <div class="ads-container">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5185608906934494"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
   </div>
 
   <script>
@@ -98,11 +122,30 @@
       const error = document.getElementById("error");
 
       if (username === "Next_gen_learners" && password === "Boos_ op") {
-        window.location.href = "dashboard.html"; // Redirect to dashboard
+        window.location.href = "dashboard.html";
       } else {
         error.textContent = "Invalid username or password";
       }
     }
+  </script>
+
+  <!-- ✅ Firebase SDK (unchanged) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAcOXWw9UEfwfZ8dYdqbDSvNSgf0siqXvI",
+      authDomain: "next-gen-learners.firebaseapp.com",
+      projectId: "next-gen-learners",
+      storageBucket: "next-gen-learners.firebasestorage.app",
+      messagingSenderId: "405032431731",
+      appId: "1:405032431731:web:671332998286a1f2ce3a06",
+      measurementId: "G-BZ4ZN8085D"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
