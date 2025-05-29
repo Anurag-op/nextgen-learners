@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Next Gen Learners - Login</title>
+  <title>Next Gen Learners</title>
 
   <!-- ✅ Google AdSense Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185608906934494"
@@ -47,42 +47,28 @@
       height: calc(100vh - 70px);
     }
 
-    .login-box {
-      width: 90%;
-      max-width: 320px;
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
+    .study-box {
+      text-align: center;
     }
 
-    .login-box input, .login-box button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .login-box button {
+    .study-box a {
+      display: inline-block;
       background: white;
       color: black;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 18px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 30px;
     }
 
-    .login-box button:hover {
+    .study-box a:hover {
       background: #ccc;
     }
 
-    .error {
-      color: red;
-      text-align: center;
-      font-size: 14px;
-    }
-
     .ads-container {
-      margin-top: 20px;
+      margin-top: 30px;
       text-align: center;
     }
   </style>
@@ -94,11 +80,9 @@
   </div>
 
   <div class="container">
-    <div class="login-box">
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button onclick="login()">Login</button>
-      <p id="error" class="error"></p>
+    <div class="study-box">
+      <h2>Welcome to your learning journey!</h2>
+      <a href="dashboard.html">Let's Study</a>
     </div>
 
     <!-- ✅ Google Ad Block -->
@@ -114,19 +98,5 @@
       </script>
     </div>
   </div>
-
-  <script>
-    function login() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const error = document.getElementById("error");
-
-      if (username === "Next_gen_learners" && password === "Boos_ op") {
-        window.location.href = "dashboard.html";
-      } else {
-        error.textContent = "Invalid username or password";
-      }
-    }
-  </script>
 </body>
 </html>
