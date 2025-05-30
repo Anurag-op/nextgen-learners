@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dashboard | Next Gen Learners</title>
-  <!-- Google AdSense script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185608906934494" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Gen Learners</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     body {
       margin: 0;
       background-color: #000;
@@ -14,111 +12,117 @@
       color: white;
     }
     .header {
-      background-color: #111;
-      padding: 15px 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 10px;
+      padding: 15px 20px;
+      background-color: #000;
+      border-bottom: 1px solid #ffa500;
+    }
+    .header img {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      cursor: pointer;
     }
     .header h1 {
-      font-size: 20px;
+      font-size: 22px;
       margin: 0;
-    }
-    .logout-btn {
-      background-color: #fff;
-      color: #000;
-      padding: 6px 12px;
       font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
     }
-    .container {
-      padding: 20px;
+    .welcome-box {
+      margin: 20px;
+      border: 2px solid #ffa500;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      color: #ffc107;
+      font-size: 20px;
     }
     .card {
-      background-color: #1a1a1a;
+      margin: 20px;
       padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      border: 2px solid #ffa500;
+      border-radius: 12px;
+      background-color: #1a1a1a;
     }
-    .card h2 {
-      margin: 0 0 5px;
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .card-title span:first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .card p {
-      margin: 0 0 10px;
       font-size: 14px;
       color: #ccc;
+      margin-bottom: 12px;
     }
     .card button {
-      background-color: #fff;
-      color: #000;
-      padding: 8px 14px;
+      background-color: #ffa500;
+      color: black;
+      padding: 10px 18px;
+      font-size: 16px;
       font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 14px;
+      width: 100%;
     }
-
-    /* Ad container styling */
-    .ads-container {
-      margin: 30px 0;
-      text-align: center;
+    .card button:hover {
+      background-color: #ffc107;
+    }
+    .logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
+
   <div class="header">
+    <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg" alt="Logo" onclick="goToYouTube()" />
     <h1>Next Gen Learners</h1>
-    <button class="logout-btn" onclick="logout()">Logout</button>
   </div>
 
-  <div class="container">
-    <!-- Physics Wallah -->
-    <div class="card">
-      <h2>Physics Wallah</h2>
-      <p>Access Physics Wallah lectures and resources.</p>
-      <button type="button" onclick="goToUpload('Physics Wallah')">Let's Study</button>
-    </div>
+  <div class="welcome-box">!! Welcome to Next Gen Learners !!</div>
 
-    <!-- Next Topper -->
-    <div class="card">
-      <h2>Next Topper</h2>
-      <p>Find toppers’ strategies and special notes here.</p>
-      <button type="button" onclick="goToUpload('Next Topper')">Let's Study</button>
+  <div class="card">
+    <div class="card-title">
+      <span>🎓 PW Courses</span>
+      <img class="logo" src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748510088/Physics_wallah_logo_wid2fm.jpg" alt="PW Logo"/>
     </div>
+    <p>Start your journey to success!</p>
+    <button onclick="goToUpload('Physics Wallah')">Start Learning →</button>
+  </div>
 
-    <!-- KGS -->
-    <div class="card">
-      <h2>KGS</h2>
-      <p>View KGS content, updates, and materials.</p>
-      <button type="button" onclick="goToUpload('KGS')">Let's Study</button>
+  <div class="card">
+    <div class="card-title">
+      <span>🚀 Next Toppers</span>
+      <img class="logo" src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748510153/next_toppers_logo_lbyf4r.jpg" alt="Next Topper Logo"/>
     </div>
-
-    <!-- Google AdSense Ad -->
-    <div class="ads-container">
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-5185608906934494"
-        data-ad-slot="1234567890"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
+    <p>Excel in your studies with Next Toppers!</p>
+    <button onclick="goToUpload('Next Topper')">Start Learning →</button>
   </div>
 
   <script>
-    function logout() {
-      window.location.href = "index.html";
-    }
-
     function goToUpload(section) {
       window.location.href = `upload.html?section=${encodeURIComponent(section)}`;
     }
+
+    function goToYouTube() {
+      const link = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
+      window.location.href = link;
+    }
   </script>
+
 </body>
 </html>
