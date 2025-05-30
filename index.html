@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Next Gen Learners</title>
-
-  <!-- ✅ Google AdSense Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185608906934494"
-     crossorigin="anonymous"></script>
-
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
     body {
       margin: 0;
@@ -17,86 +13,91 @@
       font-family: 'Poppins', sans-serif;
       color: white;
     }
-
     .header {
       display: flex;
       align-items: center;
+      gap: 10px;
       padding: 15px 20px;
       background-color: #000;
     }
-
     .header img {
       width: 36px;
       height: 36px;
       border-radius: 6px;
-      margin-right: 12px;
+      cursor: pointer;
     }
-
     .header h1 {
       margin: 0;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
-      white-space: nowrap;
     }
-
     .container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      height: calc(100vh - 70px);
-    }
-
-    .study-box {
       text-align: center;
+      height: calc(100vh - 80px);
+      padding: 0 20px;
     }
-
-    .study-box a {
-      display: inline-block;
-      background: white;
+    .welcome-box {
+      background: linear-gradient(135deg, #00bfa5, #1de9b6);
+      border-radius: 14px;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #004d40;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(29,233,182,0.6);
+      border: 2px solid #ffeb3b; /* yellow border */
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .container button {
+      background-color: #ffa500;
       color: black;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 30px;
+      padding: 14px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 6px 12px rgba(255,165,0,0.4);
+      transition: background-color 0.3s ease;
+    }
+    .container button:hover {
+      background-color: #ffc107;
     }
 
-    .study-box a:hover {
-      background: #ccc;
-    }
-
-    .ads-container {
-      margin-top: 30px;
-      text-align: center;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
   <div class="header">
-    <img src="nextgen-bg.jpg" alt="Logo">
+    <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg"
+         alt="Next Gen Logo"
+         onclick="goToYouTube()" />
     <h1>Next Gen Learners</h1>
   </div>
 
   <div class="container">
-    <div class="study-box">
-      <h2>Welcome to your learning journey!</h2>
-      <a href="dashboard.html">Let's Study</a>
-    </div>
-
-    <!-- ✅ Google Ad Block -->
-    <div class="ads-container">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5185608906934494"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
+    <div class="welcome-box">!! Welcome to your learning journey !!</div>
+    <button onclick="window.location.href='dashboard.html'">Let's Study</button>
   </div>
+
+  <script>
+    function goToYouTube() {
+      const link = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
+      window.location.href = link;
+    }
+  </script>
+
 </body>
 </html>
