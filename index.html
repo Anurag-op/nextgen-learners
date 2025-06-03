@@ -5,97 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Next Gen Learners</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
     body {
       margin: 0;
       background-color: #000;
       font-family: 'Poppins', sans-serif;
       color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+
     .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 15px 20px;
+      gap: 12px;
+      padding: 16px 20px;
       background-color: #000;
     }
+
     .header img {
-      width: 36px;
-      height: 36px;
+      width: 42px;
+      height: 42px;
       border-radius: 6px;
       cursor: pointer;
     }
+
     .header h1 {
+      font-size: 24px;
       margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: calc(100vh - 80px);
-      padding: 0 20px;
-    }
-    .welcome-box {
-      background: linear-gradient(135deg, #00bfa5, #1de9b6);
-      border-radius: 14px;
-      padding: 20px;
-      font-size: 22px;
-      font-weight: 700;
-      color: #004d40;
-      margin-bottom: 30px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 0 15px rgba(29,233,182,0.6);
-      border: 2px solid #ffeb3b; /* yellow border */
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .container button {
-      background-color: #ffa500;
-      color: black;
-      padding: 14px 0;
-      border: none;
-      border-radius: 10px;
-      font-size: 17px;
-      font-weight: 700;
-      cursor: pointer;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 6px 12px rgba(255,165,0,0.4);
-      transition: background-color 0.3s ease;
-    }
-    .container button:hover {
-      background-color: #ffc107;
+      font-weight: bold;
+      color: #fff;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .glow-text {
+      font-size: 36px;
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffae00, 0 0 30px #ffae00;
+      animation: fadeUpDown 3s ease-in-out infinite;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    @keyframes fadeUpDown {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    .start-btn {
+      margin-top: 30px;
+      background-color: #ffd700;
+      color: black;
+      padding: 14px 36px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+      transition: background 0.3s;
+    }
+
+    .start-btn:hover {
+      background-color: #ffc400;
     }
   </style>
 </head>
 <body>
 
+  <!-- ✅ Improved Header -->
   <div class="header">
-    <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg"
-         alt="Next Gen Logo"
-         onclick="goToYouTube()" />
+    <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg" alt="Logo" onclick="goToYouTube()" />
     <h1>Next Gen Learners</h1>
   </div>
 
-  <div class="container">
-    <div class="welcome-box">!! Welcome to your learning journey !!</div>
-    <button onclick="window.location.href='dashboard.html'">Let's Study</button>
+  <!-- ✅ Glowing Text -->
+  <div class="glow-text">
+    Welcome to your learning journey
   </div>
 
+  <!-- ✅ Button -->
+  <button class="start-btn" onclick="window.location.href='dashboard.html'">
+    Start Learning
+  </button>
+
+  <!-- ✅ Script -->
   <script>
     function goToYouTube() {
-      const link = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
-      window.location.href = link;
+      window.location.href = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
     }
   </script>
 
