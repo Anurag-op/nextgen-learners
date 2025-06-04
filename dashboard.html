@@ -1,88 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Next Gen Learners</title>
+  <title>Dashboard - Next Gen Learners</title>
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #000;
-      font-family: 'Poppins', sans-serif;
       color: white;
     }
     .header {
       display: flex;
       align-items: center;
-      gap: 10px;
       padding: 15px 20px;
       background-color: #000;
-      border-bottom: 1px solid #ffa500;
     }
     .header img {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 6px;
+      margin-right: 12px;
       cursor: pointer;
     }
     .header h1 {
-      font-size: 22px;
-      margin: 0;
+      font-size: 24px;
       font-weight: bold;
+      margin: 0;
     }
-    .welcome-box {
-      margin: 20px;
-      border: 2px solid #ffa500;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      color: #ffc107;
-      font-size: 20px;
+    .container {
+      padding: 20px;
     }
     .card {
-      margin: 20px;
-      padding: 15px;
+      background-color: #1a1a1a;
       border: 2px solid #ffa500;
       border-radius: 12px;
-      background-color: #1a1a1a;
+      padding: 16px;
+      margin-bottom: 20px;
     }
-    .card-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .card h2 {
+      margin-top: 0;
       font-size: 18px;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    .card-title span:first-child {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: #ffd700;
     }
     .card p {
       font-size: 14px;
       color: #ccc;
-      margin-bottom: 12px;
     }
     .card button {
       background-color: #ffa500;
       color: black;
-      padding: 10px 18px;
-      font-size: 16px;
-      font-weight: bold;
       border: none;
-      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 6px;
       cursor: pointer;
+      margin-top: 10px;
       width: 100%;
     }
     .card button:hover {
       background-color: #ffc107;
     }
-    .logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      object-fit: cover;
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: gray;
     }
   </style>
 </head>
@@ -93,34 +79,34 @@
     <h1>Next Gen Learners</h1>
   </div>
 
-  <div class="welcome-box">!! Welcome to Next Gen Learners !!</div>
-
-  <div class="card">
-    <div class="card-title">
-      <span>🎓 PW Courses</span>
-      <img class="logo" src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748510088/Physics_wallah_logo_wid2fm.jpg" alt="PW Logo"/>
+  <div class="container">
+    <div class="card">
+      <h2>🎓 PW Courses</h2>
+      <p>Start your journey to success!</p>
+      <button onclick="window.location.href='pw-upload.html'">Start Learning →</button>
     </div>
-    <p>Start your journey to success!</p>
-    <button onclick="goToUpload('Physics Wallah')">Start Learning →</button>
+
+    <div class="card">
+      <h2>🚀 Next Toppers</h2>
+      <p>Excel in your studies with Next Toppers!</p>
+      <button onclick="window.location.href='nt-upload.html'">Start Learning →</button>
+    </div>
+
+    <div class="card">
+      <h2>📘 Courses</h2>
+      <p>Explore all curated academic courses!</p>
+      <button onclick="window.location.href='courses-upload.html'">Start Learning →</button>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-title">
-      <span>🚀 Next Toppers</span>
-      <img class="logo" src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748510153/next_toppers_logo_lbyf4r.jpg" alt="Next Topper Logo"/>
-    </div>
-    <p>Excel in your studies with Next Toppers!</p>
-    <button onclick="goToUpload('Next Topper')">Start Learning →</button>
-  </div>
+  <footer>
+    <p>© 2025 Anurag. All rights reserved.</p>
+    <p>(Developed by Anurag)</p>
+  </footer>
 
   <script>
-    function goToUpload(section) {
-      window.location.href = `upload.html?section=${encodeURIComponent(section)}`;
-    }
-
     function goToYouTube() {
-      const link = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
-      window.location.href = link;
+      window.location.href = "https://youtube.com/@next_gen_learner-god?si=9tNt2FKtpMmnkmYE";
     }
   </script>
 
