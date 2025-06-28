@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Courses - Next Gen Learners</title>
-
-  <!-- ✅ Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185608906934494"
      crossorigin="anonymous"></script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: white;
-    }
-    .header {
-      background: #000;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 20px;
-    }
-    .header img {
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-    }
-    .header h1 {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 0;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="bg-black text-white">
+  <header class="flex items-center justify-between px-4 py-3 border-b border-yellow-500">
+    <div class="flex items-center space-x-3">
+      <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg" alt="Logo" class="w-10 h-10 rounded-md"/>
+      <h1 class="text-xl font-bold text-white">Next Gen Learners</h1>
+    </div>
+  </header>
 
-  <div class="header">
-    <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1748508977/nextgen-bg_bibh8m.jpg" alt="Logo">
-    <h1>Next Gen Learners</h1>
-  </div>
+  <main class="px-4 py-5 space-y-6 max-w-3xl mx-auto">
 
+    <!-- ✅ Course 1 -->
+    <article class="bg-gray-900 rounded-md border border-yellow-600 p-3 space-y-3">
+      <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1751121245/YouTube_digital_marketing_thumbnail_template_1751120823360_su7jos.jpg" class="object-cover w-full h-44 rounded" alt="YT Course">
+      <h2 class="text-sm font-semibold mt-2">
+        <a href="#" class="text-yellow-400 hover:underline">Dhruv Rathee DIGITAL MARKETING FULL COURSE</a>
+      </h2>
+      <p class="text-xs text-gray-400">Content Creation Course | Validity: Lifetime</p>
+      <div class="flex justify-between mt-2">
+        <span class="text-yellow-400 font-bold text-lg">₹50</span>
+        <span class="line-through text-gray-500 text-sm">₹6999</span>
+      </div>
+      <div class="flex space-x-2 mt-3">
+        <button class="bg-gray-700 text-white text-xs px-3 py-1 rounded hover:bg-gray-600">Explore</button>
+        <button class="bg-yellow-500 text-black text-xs px-3 py-1 rounded hover:bg-yellow-400">Enroll Now</button>
+      </div>
+    </article>
 
+    <!-- ✅ Course 2 -->
+    <article class="bg-gray-900 rounded-md border border-yellow-600 p-3 space-y-3">
+      <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1751121204/image_lgnhtq.jpg" class="object-cover w-full h-44 rounded" alt="Time Course">
+      <h2 class="text-sm font-semibold mt-2">
+        <a href="#" class="text-yellow-400 hover:underline">AI PRODUCTIVITY</a>
+      </h2>
+      <p class="text-xs text-gray-400">Productivity | Validity: Lifetime</p>
+      <div class="flex justify-between mt-2">
+        <span class="text-yellow-400 font-bold text-lg">₹50</span>
+        <span class="line-through text-gray-500 text-sm">₹5399</span>
+      </div>
+      <div class="flex space-x-2 mt-3">
+        <button class="bg-gray-700 text-white text-xs px-3 py-1 rounded hover:bg-gray-600">Explore</button>
+        <button class="bg-yellow-500 text-black text-xs px-3 py-1 rounded hover:bg-yellow-400">Enroll Now</button>
+      </div>
+    </article>
+
+    <!-- ✅ Course 3 (GPT - IMAGE UPDATED) -->
+    <article class="bg-gray-900 rounded-md border border-yellow-600 p-3 space-y-3">
+      <img src="https://res.cloudinary.com/dghbtf0pl/image/upload/v1751121164/Chat-GPT-Course-Thumbnail_ad750w.jpg" class="object-cover w-full h-44 rounded" alt="GPT Course">
+      <h2 class="text-sm font-semibold mt-2">
+        <a href="#" class="text-yellow-400 hover:underline">CHAT GPT FULL COURSE</a>
+      </h2>
+      <p class="text-xs text-gray-400">AI | Validity: Lifetime</p>
+      <div class="flex justify-between mt-2">
+        <span class="text-yellow-400 font-bold text-lg">₹50</span>
+        <span class="line-through text-gray-500 text-sm">₹6899</span>
+      </div>
+      <div class="flex space-x-2 mt-3">
+        <button class="bg-gray-700 text-white text-xs px-3 py-1 rounded hover:bg-gray-600">Explore</button>
+        <button class="bg-yellow-500 text-black text-xs px-3 py-1 rounded hover:bg-yellow-400">Enroll Now</button>
+      </div>
+    </article>
+
+  </main>
+  <footer class="text-center text-xs text-gray-400 py-4 border-t border-gray-700">
+    <p>© 2025 Anurag. All rights reserved.</p>
+    <p class="mt-1 font-semibold text-yellow-500">Next Gen Learners</p>
+    <p>(Developed by Anurag)</p>
+  </footer>
 </body>
 </html>
